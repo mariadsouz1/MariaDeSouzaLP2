@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string resp1, resp2;
+
+            Console.Write("Modelo:");
+            string Modelo = Console.ReadLine();
+            Console.Write("Informe a quilometragem rodada:");
+            int Km = int.Parse(Console.ReadLine());
+            Console.Write("Informe a potência do motor:");
+            int Cv = int.Parse(Console.ReadLine());
+
+            if (Km > 25000)
+            {
+                resp1 = "Velho";
+            }
+            else if (Km > 5000 && Km <= 25000)
+            {
+                resp1 = "Seminovo";
+            }
+            else
+            {
+                resp1 = "Novo";
+            }
+
+            if (Cv > 170)
+            {
+                resp2 = "Potente";
+            }
+            else if (Cv >= 80 && Cv <= 170)
+            {
+                resp2 = "Médio";
+            }
+            else
+            {
+                resp2 = "Popular";
+            }
+
+            Console.WriteLine("{0} - {1} - {2}", Modelo, resp1, resp2);
+        }
+    }
+}
